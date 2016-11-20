@@ -1,8 +1,7 @@
 # Rails
 /.bundle
 /vendor/bundle/
-/log/*.log
-/log/*.log.*
+/log/*
 /tmp
 public/assets/*
 data/*
