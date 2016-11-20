@@ -19,6 +19,9 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem "pry-rails"
   gem "pry-byebug"
+  gem "rspec-rails"
+  gem 'factory_girl_rails'
+  gem "rubocop", require: false
 end
 
 group :development do
