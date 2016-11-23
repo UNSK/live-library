@@ -12,3 +12,6 @@ data/*
 
 # private
 .idea
+
+# DB
+/db/*.sqlite3*
