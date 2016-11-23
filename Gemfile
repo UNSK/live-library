@@ -2,8 +2,6 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
-# DBは後回し
-gem "sqlite3"
 # Use Puma as the app server
 gem "puma", "~> 3.0"
 gem "slim-rails"
@@ -16,6 +14,8 @@ gem "jquery-rails"
 gem "jbuilder", "~> 2.5"
 
 group :development, :test do
+  # DBは後回し
+  gem "sqlite3"
   gem "pry-rails"
   gem "pry-byebug"
   gem "rspec-rails"
@@ -32,5 +32,8 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# とりあえずheroku用
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
